@@ -26,7 +26,7 @@ const DialogBanView: React.FC = () => {
   const assocPlayer = useAssociatedPlayerValue();
   const playerDetails = usePlayerDetailsValue();
   const [reason, setReason] = useState("");
-  const [duration, setDuration] = useState("2 hours");
+  const [duration, setDuration] = useState("30 days");
   const [customDuration, setCustomDuration] = useState("hours");
   const [customDurLength, setCustomDurLength] = useState("1");
   const t = useTranslate();
@@ -85,28 +85,12 @@ const DialogBanView: React.FC = () => {
 
   const banDurations = [
     {
-      value: "2 hours",
-      label: `2 ${t("nui_menu.player_modal.ban.hours")}`,
+      value: "30 days",
+      label: `30 ${t("nui_menu.player_modal.ban.days")}`,
     },
     {
-      value: "8 hours",
-      label: `8 ${t("nui_menu.player_modal.ban.hours")}`,
-    },
-    {
-      value: "1 day",
-      label: `1 ${t("nui_menu.player_modal.ban.days")}`,
-    },
-    {
-      value: "2 days",
-      label: `2 ${t("nui_menu.player_modal.ban.days")}`,
-    },
-    {
-      value: "1 week",
-      label: `1 ${t("nui_menu.player_modal.ban.weeks")}`,
-    },
-    {
-      value: "2 weeks",
-      label: `2 ${t("nui_menu.player_modal.ban.weeks")}`,
+      value: "365 days",
+      label: `365 ${t("nui_menu.player_modal.ban.days")}`,
     },
     {
       value: "permanent",
