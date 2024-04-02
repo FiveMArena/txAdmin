@@ -14,7 +14,7 @@ import ModalCentralMessage from "@/components/ModalCentralMessage";
 export default function PlayerBanTab({ playerRef }: { playerRef: PlayerModalRefType }) {
     const reasonRef = useRef<HTMLInputElement>(null);
     const customMultiplierRef = useRef<HTMLInputElement>(null);
-    const [currentDuration, setCurrentDuration] = useState('2 days');
+    const [currentDuration, setCurrentDuration] = useState('30 days');
     const [customUnits, setCustomUnits] = useState('days');
     const [isSaving, setIsSaving] = useState(false);
     const { hasPerm } = useAdminPerms();
@@ -83,12 +83,8 @@ export default function PlayerBanTab({ playerRef }: { playerRef: PlayerModalRefT
                         </SelectTrigger>
                         <SelectContent className="tracking-wide">
                             <SelectItem value="custom" className="font-bold">Custom (set below)</SelectItem>
-                            <SelectItem value="2 hours">2 HOURS</SelectItem>
-                            <SelectItem value="8 hours">8 HOURS</SelectItem>
-                            <SelectItem value="1 day">1 DAY</SelectItem>
-                            <SelectItem value="2 days">2 DAYS</SelectItem>
-                            <SelectItem value="1 week">1 WEEK</SelectItem>
-                            <SelectItem value="2 weeks">2 WEEKS</SelectItem>
+                            <SelectItem value="30 days">30 DAYS</SelectItem>
+                            <SelectItem value="365 days">365 DAYS</SelectItem>
                             <SelectItem value="permanent" className="font-bold">Permanent</SelectItem>
                         </SelectContent>
                     </Select>
