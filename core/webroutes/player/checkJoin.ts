@@ -214,7 +214,6 @@ function checkBan(
             title,
             `${expLine}
             <strong>${textKeys.label_date}:</strong> ${banDate} <br>
-            <strong>${textKeys.label_author}:</strong> ${xss(ban.author)} <br>
             <strong>${textKeys.label_reason}:</strong> ${xss(ban.reason)} <br>
             <strong>${textKeys.label_id}:</strong> <codeid>${ban.id}</codeid> <br>
             ${prepCustomMessage(txAdmin.playerDatabase.config.banRejectionMessage)}
